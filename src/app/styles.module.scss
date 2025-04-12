@@ -1,0 +1,54 @@
+.container {
+  max-width: 1024px;
+  height: 800px;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  position: relative;
+  background-image: url(../assets/images/background.jpg);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+
+  .button {
+    position: absolute;
+    z-index: 5;
+    width: 160px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 8px;
+    font-size: medium;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    left: 50%;
+    bottom: 100px;
+    transform: translate(-50%);
+
+    cursor: pointer;
+
+    &.start {
+      background-color: yellow;
+
+      &:hover {
+        background-color: rgb(192, 182, 0);
+      }
+    }
+
+    &.stop {
+      background-color: black;
+      color: white;
+
+      &:hover {
+        background-color: rgb(54, 54, 54);
+      }
+    }
+  }
+
+  .plane {
+    position: absolute;
+    transition: transform 0.2s linear;
+
+    padding: 8px;
+    border-radius: 50%;
+    background-color: rgb(29, 29, 29);
+  }
+}
