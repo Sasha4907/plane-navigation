@@ -49,7 +49,7 @@ const FlightAnimation = () => {
     const current = scaledData[index];
 
     const radians = (current.direction * Math.PI) / 180;
-    const dx = Math.cos(radians) * current.speed;
+    const dx = -Math.cos(radians) * current.speed;
     const dy = -Math.sin(radians) * current.speed;
 
     let newX = currentPosRef.current.x + dx;
